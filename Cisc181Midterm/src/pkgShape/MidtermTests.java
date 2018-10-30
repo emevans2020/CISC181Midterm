@@ -76,7 +76,15 @@ class MidtermTests {
 	 * 
 	 */
 	public void CubConstructorTest() {
-		
+		Cuboid cuboid = new Cuboid (3,4,5);
+		assertTrue (cuboid instanceof Cuboid);
+	}
+	
+	public void CuboidSetterTest() {
+		Cuboid cube = new Cuboid (2,3,5);
+		assertEquals (cube.getiWidth(),2);
+		assertEquals (cube.getiLength(),3);
+		assertEquals (cube.getiDepth(),5);
 	}
 	
 
