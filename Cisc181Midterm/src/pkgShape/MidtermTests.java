@@ -75,17 +75,66 @@ class MidtermTests {
 	/** Cuboid Tests
 	 * 
 	 */
+	@Test
 	public void CubConstructorTest() {
 		Cuboid cuboid = new Cuboid (3,4,5);
 		assertTrue (cuboid instanceof Cuboid);
 	}
 	
-	public void CuboidSetterTest() {
+	@Test
+	public void CuboidGetterTest() {
 		Cuboid cube = new Cuboid (2,3,5);
 		assertEquals (cube.getiWidth(),2);
 		assertEquals (cube.getiLength(),3);
 		assertEquals (cube.getiDepth(),5);
 	}
 	
+	@Test
+	public void CuboidSetterTest() {
+		Cuboid cube = new Cuboid (2,3,5);
+		cube.setiDepth(8);
+		assertEquals (cube.getiDepth(),8);
+	}
+	
+	@Test
+	public void CubeAreaTest() {
+		Cuboid cube = new Cuboid (2,3,5);
+		assertEquals (cube.area(),62.0);
+	}
+	
+	@Test
+	public void CubePerimeterTest() {
+		
+	}
+	
+	@Test
+	public void SortByAreaTest() {
+	    Cuboid cubeOne = new Cuboid(2,2,2);
+	    Cuboid cubeTwo = new Cuboid(3,4,6);
+	    if (cubeOne.compareTo(cubeTwo) == 0) {
+	        System.out.println("Similar cuboid.");
+	    } 
+	    else if(cubeOne.compareTo(cubeTwo) == 1) {
+	        System.out.println("First cuboid bigger than second.");
+	    } 
+	    else {
+	        System.out.println("Second cuboid is bigger than first.");
+	    }
+	}
+	
+	@Test
+	public void SortByVolumeTest() {
+	    Cuboid cub1 = new Cuboid(2,2,2);
+	    Cuboid cub2 = new Cuboid(3,4,6);
+	    if (cub1.compareTo(cub2) == 0) {
+	        System.out.println("Similar Cuboids.");
+	    } 
+	    else if(cub1.compareTo(cub2) == 1) {
+	        System.out.println("First Cuboid bigger than second.");
+	    } 
+	    else {
+	        System.out.println("Second Cuboid is bigger than first.");
+	    }
+	}
 
 }
