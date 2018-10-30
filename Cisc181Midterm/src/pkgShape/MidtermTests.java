@@ -59,7 +59,7 @@ class MidtermTests {
 	//tests the compareTo method
 	@Test
 	public void TestCompareTo() {
-	    Rectangle rec1 = new Rectangle(2, 2);
+	    Rectangle rec1 = new Rectangle(10, 10);
 	    Rectangle rec2 = new Rectangle(4, 6);
 	    if (rec1.compareTo(rec2) == 0) {
 	        System.out.println("Similar rectangles.");
@@ -104,8 +104,18 @@ class MidtermTests {
 	
 	@Test
 	public void CubePerimeterTest() {
+		boolean thrown = false;
+		Cuboid cube = new Cuboid (2,3,4);
 		
-	}
+		try {
+			cube.perimeter();
+		}
+		
+		catch (UnsupportedOperationException e) {
+		    thrown = true;
+		  }
+		  assertTrue(thrown);
+		}
 	
 	@Test
 	public void SortByAreaTest() {

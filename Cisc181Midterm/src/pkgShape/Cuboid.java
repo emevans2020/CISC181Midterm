@@ -58,10 +58,10 @@ public class Cuboid extends Rectangle implements Comparable<Object>{
 	class SortByArea implements Comparator <Cuboid>{
 		@Override
 		public int compare(Cuboid o1, Cuboid o2) {
-			if (o1.area() <o2.area()) {
+			if (o1.area() < o2.area()) {
 	        	return -1;
 	        }
-	        else if (o1.area() > (o2.area())) {
+	        if (o1.area() > (o2.area())) {
 	        	return 1;
 	        }
 	        else
@@ -73,6 +73,6 @@ public class Cuboid extends Rectangle implements Comparable<Object>{
 		public int compare(Cuboid cubeOne, Cuboid cubeTwo) 
 	    { 
 	        return (int) (cubeOne.volume() - (cubeTwo.volume())); 
-	    } 
+		} 
 	}
 }
